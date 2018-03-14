@@ -20,14 +20,16 @@ export default class ProductReviewsList extends Component {
           </p>
 
           <p className="ProductReviewsList__reviews-number">
-            <b> {this.props.ProductStore.reviewsCount} </b> reviews
+            <b>{this.props.ProductStore.reviewsCount}</b> reviews
           </p>
         </div>
 
         <ul className="ProductReviewsList__reviews-list list list--no-bullets list--no-padding-left">
           {this.props.ProductStore.sortedReviews.map((review, index) => {
             return (
-              <ProductReview reviewData={review} key={index} index={index} />
+              <div class="ProductReviewsList__review">
+                <ProductReview reviewData={review} key={index} index={index} />
+              </div>
             )
           })}
         </ul>

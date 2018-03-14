@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductReview matches snapshot 1`] = `
+<li
+  className="ProductReview"
+>
+  <h4
+    className="ProductReview__title"
+  >
+    Test Review Title 1
+  </h4>
+  <div
+    className="ProductReview__rating"
+  >
+    <inject-ProductRating-with-ProductStore
+      inputIdIndex="1"
+      scoreValue={5}
+    />
+    <div
+      className="ProductReview__info"
+    >
+      <span
+        className="ProductReview__user-name"
+      >
+        Lucian
+      </span>
+        |  
+      <span
+        className="ProductReview__date"
+      >
+        14/03/2018
+      </span>
+    </div>
+  </div>
+  <div />
+  <p
+    className="ProductReview__text"
+  >
+    Review Text Test 1
+  </p>
+</li>
+`;

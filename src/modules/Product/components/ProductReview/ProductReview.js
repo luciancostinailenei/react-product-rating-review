@@ -1,5 +1,5 @@
 import React from 'react'
-import Moment from 'react-moment'
+import Moment from 'moment'
 
 import './ProductReview.scss'
 
@@ -12,7 +12,6 @@ const ProductReview = props => {
       <div className="ProductReview__rating">
         <ProductRating
           inputIdIndex={props.index}
-          changeRatingHandler={this.changeRating}
           scoreValue={props.reviewData.rating}
         />
         <div className="ProductReview__info">
@@ -20,13 +19,13 @@ const ProductReview = props => {
             {props.reviewData.user}
           </span>
           &nbsp; | &nbsp;
-          <span>
-            <Moment format="DD/MM/YYYY">{props.reviewData.date}</Moment>
+          <span className="ProductReview__date">
+            {Moment(props.reviewData.date).format('DD/MM/YYYY')}
           </span>
         </div>
       </div>
       <div />
-      <p>{props.reviewData.text}</p>
+      <p className="ProductReview__text">{props.reviewData.text}</p>
     </li>
   )
 }
