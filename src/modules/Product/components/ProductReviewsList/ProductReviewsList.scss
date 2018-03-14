@@ -1,0 +1,22 @@
+.ProductReviewsList { padding: 10px; }
+
+    .ProductReviewsList__general-rating {
+        color: var(--teal-500);
+        display: flex;
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .ProductReviewsList__average-score {
+        color: var(--amber-700);
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .ProductReviewsList__reviews-number {
+        margin-top: 0;
+        margin-left: 3px;
+    }
+
+    .ProductReviewsList__reviews-list { margin-top: 40px; }

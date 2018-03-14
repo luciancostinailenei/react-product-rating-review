@@ -1,0 +1,54 @@
+.ProductReviewForm { 
+    background-color: var(--teal-50);
+    border-radius: 3px;
+    padding: 20px;
+}
+
+    .ProductReviewForm__rating {
+        color: var(--teal-700);
+        align-items: center;
+        display: flex;
+    }
+
+    .ProductReviewForm__rating-stars {
+        margin-left: 10px;
+    }
+    
+    .ProductReviewForm__title {
+        margin-top: 10px;
+        input {
+            width: 500px;
+            height: 20px;
+            border: none;
+            padding: 10px;
+            color: var(--gray-600);
+            border-radius: 3px;
+        }
+    }
+
+    .ProductReviewForm__text {
+        margin-top: 10px;
+
+        textarea {
+            width: 800px;
+            height: 150px;
+            border: none;
+            padding: 10px;
+            color: var(--gray-600);
+            border-radius: 3px;
+        }
+    }
+
+    .ProductReviewForm__submit {
+        margin-top: 10px;
+        
+        span {
+            color: var(--gray-700);
+            font-size: 12px;
+            margin-left: 10px;
+        }
+    }
+
+.ProductReviewForm--hidden {
+    display: none;
+}

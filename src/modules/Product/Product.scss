@@ -1,0 +1,41 @@
+.Product { }
+
+  .Product__product-thumbnail { }
+
+  .Product__product-details { padding: 10px; }
+
+  .Product__title { 
+    font-family: 'Abel', sans-serif;
+    font-size: 28px;
+    margin: 0; 
+  }
+
+  .Product__price {
+    font-weight: bold;
+    color: var(--teal-700-a);
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .Product__product-reviews {
+    border-top: 1px solid;
+    border-top-color: var(--teal-100);
+    grid-column: 1 / end;
+
+    h3 {
+      color: var(--teal-700);
+      margin-left: 10px;
+    }
+  }
+
+  .Product__product-reviews-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    button { margin-right: 5px; }
+  }
+
+  .Product__review-form { }
+
+  .Product__review-form--hidden { display: none; }

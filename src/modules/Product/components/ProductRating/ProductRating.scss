@@ -1,0 +1,60 @@
+.ProductRating {
+    overflow: hidden;
+    display: inline-block;
+
+    .ProductReviewForm & {
+        margin-left: 5px;
+    }
+}
+
+    .ProductRating__input {
+        float: right;
+        width: 16px;
+        height: 16px;
+        padding: 0;
+        margin: 0 0 0 -16px;
+        opacity: 0;
+
+        &:checked {
+            &~ .ProductRating__star {
+                background-position: 0 0; 
+            }
+        }
+    }
+
+    .ProductRating__star {
+        cursor: pointer;
+        float: right;
+        position: relative;
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url('/assets/star.png') 0 -16px;
+
+        &:hover {
+            background-position: 0 0;
+
+            &~ .ProductRating__star {
+                background-position: 0 0;
+            }
+
+            .ProductRating:hover & {
+                background-position: 0 0;
+
+                &~ .ProductRating__star {
+                    background-position: 0 0;
+                }
+            }
+        }
+
+        .ProductRating__input:checked & {
+            background-position: 0 0;
+        }
+
+        .ProductRating--disabled & { 
+            pointer-events: none;
+        }
+    }
+
+
+.ProductRating--disabled { }
