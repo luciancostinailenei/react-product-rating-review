@@ -16,6 +16,11 @@
  * BTN
  * .btn BEM block............... Block and nested elements properties
  *
+ * COLOR-PICKER
+ * .color-picker BEM block............... Block and nested elements properties
+ *
+ * SIZE-PICKER
+ * .size-picker BEM block............... Block and nested elements properties
  */
 
 
@@ -94,6 +99,8 @@ h3 {
 
 .list--no-bullets { list-style-type: none; }
 
+.list--squared { list-style-type: square; }
+
 .list--inline { display: flex; }
 
 .list--no-padding-left { padding-left: 0; }
@@ -109,15 +116,23 @@ h3 {
 \*------------------------------------*/
 
 .btn { 
+    align-items: center;
     border: none;
     border-radius: 3px;
+    display: flex;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
+    justify-content: center;
     height: 40px;
     letter-spacing: 1px;
     outline: none;
-    width: 120px;
+    min-width: 120px;
     text-transform: uppercase;
+
+    svg {
+        font-size: 18px;
+        margin-right: 5px;
+    }
 }
 
 .btn--primary {
@@ -129,6 +144,11 @@ h3 {
     }
 }
 
+.btn--catchy {
+    background-color: var(--amber-400-a);
+    font-weight: bold;
+}
+
 .btn--disabled {
     background-color: var(--gray-300);
     color: var(--gray-900);
@@ -138,3 +158,96 @@ h3 {
         color: var(--gray-900);
     }
 }
+
+
+
+
+
+/*------------------------------------*\
+  #COLOR-PICKER
+\*------------------------------------*/
+
+.color-picker { }
+
+    .color-picker__color {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 40px;
+        color: white;
+        text-align: center;
+        height: 40px;
+        margin-left: 13px;
+        width: 40px;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+    }
+
+    .color-picker__title {
+        font-size: 13px;
+        margin: 0 0 3px 3px;
+    }
+
+    .color-picker__selected-color {
+        font-weight: bold;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .color-picker__selected-color--dark-blue {
+        color: #062c72;
+    }
+
+    .color-picker__color--selected {
+        border: 2px solid var(--teal-300);
+    }
+
+    .color-picker__color--dark-blue {
+        background-color: #062c72
+    }
+
+    .color-picker__color--blue {
+        background-color: #0e6cd1;
+    }
+
+    .color-picker__color--gray {
+        background-color: #d8d8d6;
+    }
+
+    .color-picker__color--black {
+        background-color: black;
+    }
+
+
+
+
+    
+/*------------------------------------*\
+  #SIZE-PICKER
+\*------------------------------------*/
+
+.size-picker { }
+
+    .size-picker__title { }
+
+    .size-picker__size {
+        display: inline-block; 
+        width: 25px;
+        height: 25px;
+        margin-left: 5px;
+        line-height: 25px;
+        text-align: center;
+        border: 1px solid var(--gray-300);
+        background-color: white;
+        font-weight: bold;
+    }
+
+    .size-picker__size--out-of-stock {
+        color: var(--gray-400);
+    }
+
+    .size-picker__size--selected {
+        border: 2px solid var(--teal-300);
+    }
