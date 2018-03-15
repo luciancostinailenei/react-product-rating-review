@@ -22,7 +22,7 @@ export default class ProductReviewForm extends Component {
     return {
       rating: 0,
       title: '',
-      text: 'Review'
+      text: ''
     }
   }
 
@@ -84,7 +84,11 @@ export default class ProductReviewForm extends Component {
         </div>
 
         <div className="ProductReviewForm__text">
-          <textarea value={this.state.text} onChange={this.setReviewText} />
+          <textarea
+            placeholder="Review..."
+            value={this.state.text}
+            onChange={this.setReviewText}
+          />
         </div>
 
         <div className="ProductReviewForm__submit">
