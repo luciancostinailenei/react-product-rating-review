@@ -70,7 +70,6 @@ export default class ProductReviewForm extends Component {
           <ProductRating
             ref="ratingInput"
             inputIdIndex="100"
-            resetable="true"
             changeRatingHandler={this.changeRating}
           />
         </div>

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductRating matches snapshot 1`] = `
+<ProductRating
+  ProductStore={ProductStore {}}
+  inputIdIndex="100"
+/>
+`;
+
+exports[`ProductRating matches snapshot 2`] = `
+<ProductRating
+  ProductStore={ProductStore {}}
+  scoreValue="4"
+/>
+`;
