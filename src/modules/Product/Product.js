@@ -3,9 +3,12 @@ import { inject, observer } from 'mobx-react'
 
 import './Product.scss'
 
-import ProductThumbnail from './components/ProductThumbnail/ProductThumbnail'
+import Thumbnail from '../shared-components/Thumbnail/Thumbnail'
 import ProductReviewsList from './components/ProductReviewsList/ProductReviewsList'
 import ProductReviewForm from './components/ProductReviewForm/ProductReviewForm'
+import ColorPicker from '../shared-components/ColorPicker/ColorPicker'
+import SizePicker from '../shared-components/SizePicker/SizePicker'
+import SpecificationsList from '../shared-components/SpecificationsList/SpecificationsList'
 
 @inject('ProductStore')
 @observer
@@ -24,7 +27,11 @@ class Product extends Component {
     return (
       <div className="Product layout layout--product">
         <div className="Product__product-thumbnail">
-          <ProductThumbnail />
+          <Thumbnail
+            type="full"
+            source="https://www.shoesvalley.nl/image/cache/nike/Air%20Max2017/2052-1-800x800.jpg"
+            alt="Nike AirMax 7"
+          />
         </div>
 
         <div className="Product__product-details">
@@ -33,49 +40,15 @@ class Product extends Component {
           <p className="Product__price">$193</p>
 
           <div className="Product__specifications-list">
-            <ul className="list list--no-padding-left list--squared Product__specification">
-              <li>Lorem ipsum dolor sit amet, consectetur </li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing </li>
-              <li>Lorem ipsum dolor</li>
-              <li>Lorem ipsum dolor sit amet</li>
-            </ul>
+            <SpecificationsList />
           </div>
 
-          <div className="Product__color-picker color-picker">
-            <p className="color-picker__title">
-              Color:
-              <span className="color-picker__selected-color color-picker__selected-color--dark-blue">
-                DARK BLUE
-              </span>
-            </p>
-            <span className="color-picker__color color-picker__color--dark-blue color-picker__color--selected">
-              DB
-            </span>
-            <span className="color-picker__color color-picker__color--blue">
-              B
-            </span>
-            <span className="color-picker__color color-picker__color--gray">
-              Y
-            </span>
-            <span className="color-picker__color color-picker__color--black">
-              R
-            </span>
+          <div className="Product__color-picker">
+            <ColorPicker />
           </div>
 
-          <div className="Product__size-picker size-picker">
-            <span className="size-picker__title">Size: </span>
-
-            <span className="size-picker__size size-picker__size--out-of-stock">
-              37
-            </span>
-            <span className="size-picker__size size-picker__size--selected">
-              38
-            </span>
-            <span className="size-picker__size">39</span>
-            <span className="size-picker__size">40</span>
-            <span className="size-picker__size">41</span>
-            <span className="size-picker__size">42</span>
+          <div className="Product__size-picker">
+            <SizePicker />
           </div>
 
           <button className="Product__add-to-cart btn btn--catchy btn--center-content">

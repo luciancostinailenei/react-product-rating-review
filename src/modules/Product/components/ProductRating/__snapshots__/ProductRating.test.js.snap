@@ -1,15 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductRating matches snapshot 1`] = `
+exports[`ProductRating matches snapshot on both active and disabled states 1`] = `
 <ProductRating
   ProductStore={ProductStore {}}
   inputIdIndex="100"
 />
 `;
 
-exports[`ProductRating matches snapshot 2`] = `
+exports[`ProductRating matches snapshot on both active and disabled states 2`] = `
 <ProductRating
   ProductStore={ProductStore {}}
-  scoreValue="4"
+  inputIdIndex="1"
+  scoreValue={4}
 />
 `;

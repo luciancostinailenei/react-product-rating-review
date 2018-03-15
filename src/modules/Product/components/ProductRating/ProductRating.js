@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
+import PropTypes from 'prop-types'
 
 import './ProductRating.scss'
 
@@ -27,10 +28,11 @@ export default class ProductRating extends Component {
   }
 
   isStarChecked(id) {
-    return (
-      this.props.scoreValue === parseInt(id, 10) ||
-      this.state.checkedStarId === id
-    )
+    if (this.props.scoreValue) {
+      return this.props.scoreValue === parseInt(id, 10)
+    }
+
+    return this.state.checkedStarId === id
   }
 
   resetVote() {
@@ -70,7 +72,7 @@ export default class ProductRating extends Component {
           className="ProductRating__input"
           id={'ProductRating__input-' + this.props.inputIdIndex + '-4'}
           name={'ProductRating__input-' + this.props.inputIdIndex}
-          checked={this.isStarChecked('4')}
+          checked={this.isStarChecked('4') ? true : false}
         />
         <label
           htmlFor={'ProductRating__input-' + this.props.inputIdIndex + '-4'}
@@ -127,4 +129,9 @@ export default class ProductRating extends Component {
       </span>
     )
   }
+}
+
+ProductRating.propTypes = {
+  scoreValue: PropTypes.number,
+  inputIdIndex: PropTypes.string
 }

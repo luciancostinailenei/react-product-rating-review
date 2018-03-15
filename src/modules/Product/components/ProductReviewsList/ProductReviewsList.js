@@ -27,8 +27,8 @@ export default class ProductReviewsList extends Component {
         <ul className="ProductReviewsList__reviews-list list list--no-bullets list--no-padding-left">
           {this.props.ProductStore.sortedReviews.map((review, index) => {
             return (
-              <div className="ProductReviewsList__review">
-                <ProductReview reviewData={review} key={index} index={index} />
+              <div className="ProductReviewsList__review" key={index}>
+                <ProductReview reviewData={review} index={index} />
               </div>
             )
           })}

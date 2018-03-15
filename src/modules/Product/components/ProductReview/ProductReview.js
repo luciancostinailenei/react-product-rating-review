@@ -1,5 +1,6 @@
 import React from 'react'
 import Moment from 'moment'
+import PropTypes from 'prop-types'
 
 import './ProductReview.scss'
 
@@ -28,6 +29,17 @@ const ProductReview = props => {
       <p className="ProductReview__text">{props.reviewData.text}</p>
     </li>
   )
+}
+
+ProductReview.propTypes = {
+  reviewData: PropTypes.shape({
+    rating: PropTypes.number,
+    title: PropTypes.string,
+    text: PropTypes.string,
+    user: PropTypes.string,
+    date: PropTypes.date
+  }),
+  index: PropTypes.number
 }
 
 export default ProductReview

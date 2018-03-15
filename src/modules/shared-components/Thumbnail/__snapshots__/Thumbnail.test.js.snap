@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductReview matches snapshot 1`] = `
+<div
+  className="Thumbnail"
+>
+  <img
+    className="thumbnail thumbnail--undefined"
+  />
+</div>
+`;
