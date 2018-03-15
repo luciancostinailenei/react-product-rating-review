@@ -43,8 +43,8 @@ export default class ProductReviewForm extends Component {
     }
 
     this.props.ProductStore.addReview(productReview)
-    this.setState(this.getInitialState())
 
+    this.setState({ rating: 0, title: '', text: 'Review' })
     this.refs.ratingInput.wrappedInstance.resetVote()
     this.props.ProductStore.isProductReviewFormDisplayed = false
   }
@@ -78,14 +78,14 @@ export default class ProductReviewForm extends Component {
         <div className="ProductReviewForm__title">
           <input
             onChange={this.setReviewTitle}
-            defaultValue={this.state.title}
+            value={this.state.title}
             type="text"
             placeholder="Review title"
           />
         </div>
 
-        <div className="ProductReviewForm__text" onChange={this.setReviewText}>
-          <textarea defaultValue={this.state.text} />
+        <div className="ProductReviewForm__text">
+          <textarea value={this.state.text} onChange={this.setReviewText} />
         </div>
 
         <div className="ProductReviewForm__submit">

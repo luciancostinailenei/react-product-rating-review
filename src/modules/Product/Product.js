@@ -32,7 +32,7 @@ class Product extends Component {
 
           <p className="Product__price">$193</p>
 
-          <p className="Product__specifications-list">
+          <div className="Product__specifications-list">
             <ul className="list list--no-padding-left list--squared Product__specification">
               <li>Lorem ipsum dolor sit amet, consectetur </li>
               <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
@@ -40,7 +40,7 @@ class Product extends Component {
               <li>Lorem ipsum dolor</li>
               <li>Lorem ipsum dolor sit amet</li>
             </ul>
-          </p>
+          </div>
 
           <div className="Product__color-picker color-picker">
             <p className="color-picker__title">
@@ -78,8 +78,8 @@ class Product extends Component {
             <span className="size-picker__size">42</span>
           </div>
 
-          <button className="Product__add-to-cart btn btn--catchy">
-            <i class="fas fa-cart-arrow-down" /> ADD TO CART
+          <button className="Product__add-to-cart btn btn--catchy btn--center-content">
+            <i className="fas fa-cart-arrow-down" /> ADD TO CART
           </button>
         </div>
 
