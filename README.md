@@ -2,7 +2,8 @@
 
 Rating and review form component built with React and MobX
 
-##Technology stack
+## Technology stack
+
 The following technologies and conventions have been used for developing this project:
 
 * React
@@ -13,7 +14,7 @@ The following technologies and conventions have been used for developing this pr
 * CSS Grid
 * SASS preprocessor for CSS
 
-##How to run ?
+## How to run ?
 
 1.  Clone the repository
 2.  Navigate to project's folder
@@ -21,6 +22,6 @@ The following technologies and conventions have been used for developing this pr
 4.  Run **npm install** command and wait for the dependencies to be downloaded
 5.  Run **npm start** command and wait for the development server to start
 
-##Running tests
+## Running tests
 
 In order to run the unit tests, run **jest** command
