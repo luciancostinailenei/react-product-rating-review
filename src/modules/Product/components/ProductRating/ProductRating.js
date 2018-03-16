@@ -133,5 +133,5 @@ export default class ProductRating extends Component {
 
 ProductRating.propTypes = {
   scoreValue: PropTypes.number,
-  inputIdIndex: PropTypes.string
+  inputIdIndex: PropTypes.number
 }
