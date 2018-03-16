@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { inject } from 'mobx-react'
 
 import './ProductReviewForm.scss'
+import './ProductReviewForm.responsive.scss'
 
 import ProductRating from '../ProductRating/ProductRating'
 

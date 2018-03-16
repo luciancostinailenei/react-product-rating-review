@@ -5,5 +5,6 @@ import App from './App'
 import './global/styles/variables.scss'
 import './global/styles/theme.scss'
 import './global/styles/layout.scss'
+import './global/styles/layout.responsive.scss'
 
 ReactDOM.render(<App />, document.getElementById('root'))

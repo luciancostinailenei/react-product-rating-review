@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 
 import './Product.scss'
+import './Product.responsive.scss'
 
 import Thumbnail from '../shared-components/Thumbnail/Thumbnail'
 import ProductReviewsList from './components/ProductReviewsList/ProductReviewsList'
