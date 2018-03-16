@@ -1,6 +1,8 @@
 /**
  * CONTENTS
  *
+ * IMPORTS
+ *
  * LAYOUT SETUP
  * Global...............General native elements properties
  *
@@ -22,6 +24,16 @@
  * SIZE-PICKER
  * .size-picker BEM block............... Block and nested elements properties
  */
+
+
+
+
+
+/*------------------------------------*\
+  #LAYOUT SETUP
+\*------------------------------------*/
+
+@import './variables';
 
 
 
@@ -200,7 +212,7 @@ h3 {
     }
 
     .color-picker__selected-color--dark-blue {
-        color: #062c72;
+        color: $shoes-dark-blue;
     }
 
     .color-picker__color--selected {
@@ -208,19 +220,19 @@ h3 {
     }
 
     .color-picker__color--dark-blue {
-        background-color: #062c72
+        background-color: $shoes-dark-blue;
     }
 
     .color-picker__color--blue {
-        background-color: #0e6cd1;
+        background-color: $shoes-blue;
     }
 
     .color-picker__color--gray {
-        background-color: #d8d8d6;
+        background-color: $shoes-gray;
     }
 
     .color-picker__color--black {
-        background-color: black;
+        background-color: $shoes-black;
     }
 
 
